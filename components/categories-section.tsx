@@ -63,17 +63,17 @@ export function CategoriesSection() {
               href={`https://wa.me/5564992055989?text=Olá! Gostaria de ver produtos de ${category.name}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group"
+              className="group h-full" // Adicionei h-full aqui
             >
-              <div className="flex flex-col items-center gap-4 p-6 bg-background rounded-2xl border border-border hover:border-primary/30 hover:shadow-lg transition-all cursor-pointer">
-                <div className={`p-4 rounded-2xl transition-all ${category.color} ${category.hoverColor}`}>
+              <div className="flex flex-col items-center p-6 bg-background rounded-2xl border border-border hover:border-primary/30 hover:shadow-lg transition-all cursor-pointer h-full">
+                <div className={`p-4 rounded-2xl transition-all mb-4 ${category.color} ${category.hoverColor}`}>
                   <category.icon className="h-8 w-8" />
                 </div>
-                <div className="text-center">
-                  <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors text-sm lg:text-base">
+                <div className="text-center flex flex-col flex-1">
+                  <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors text-sm lg:text-base leading-tight">
                     {category.name}
                   </h3>
-                  <p className="text-xs text-muted-foreground mt-1">
+                  <p className="text-xs text-muted-foreground mt-2">
                     {category.description}
                   </p>
                 </div>

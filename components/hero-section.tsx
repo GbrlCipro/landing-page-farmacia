@@ -87,6 +87,7 @@ export function HeroSection() {
               <div className="space-y-4">
                 <div className="bg-card rounded-2xl p-4 shadow-lg border border-border hover:shadow-xl transition-shadow">
                   <div className="aspect-square bg-gradient-to-br from-green-50 to-green-100 rounded-xl mb-3 flex items-center justify-center">
+                    <img src="/vitamina.png" alt="TESTE"/>
                     <div className="w-16 h-20 bg-primary/20 rounded-lg" />
                   </div>
                   <p className="text-xs text-muted-foreground">Suplemento</p>
@@ -95,6 +96,7 @@ export function HeroSection() {
                 </div>
                 <div className="bg-card rounded-2xl p-4 shadow-lg border border-border hover:shadow-xl transition-shadow">
                   <div className="aspect-square bg-gradient-to-br from-red-50 to-red-100 rounded-xl mb-3 flex items-center justify-center">
+                    <img src="/vitamina.png" alt="TESTE"/>
                     <div className="w-14 h-14 bg-accent/20 rounded-full" />
                   </div>
                   <p className="text-xs text-muted-foreground">Cuidados</p>
@@ -105,6 +107,7 @@ export function HeroSection() {
               <div className="space-y-4 pt-8">
                 <div className="bg-card rounded-2xl p-4 shadow-lg border border-border hover:shadow-xl transition-shadow">
                   <div className="aspect-square bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl mb-3 flex items-center justify-center">
+                    <img src="/vitamina.png" alt="TESTE"/>
                     <div className="w-12 h-16 bg-blue-200/50 rounded-lg" />
                   </div>
                   <p className="text-xs text-muted-foreground">Medicamento</p>
@@ -113,6 +116,7 @@ export function HeroSection() {
                 </div>
                 <div className="bg-card rounded-2xl p-4 shadow-lg border border-border hover:shadow-xl transition-shadow">
                   <div className="aspect-square bg-gradient-to-br from-pink-50 to-pink-100 rounded-xl mb-3 flex items-center justify-center">
+                    <img src="/vitamina.png" alt="TESTE"/>
                     <div className="w-10 h-14 bg-pink-200/50 rounded-lg" />
                   </div>
                   <p className="text-xs text-muted-foreground">Beleza</p>
@@ -122,10 +126,17 @@ export function HeroSection() {
               </div>
             </div>
 
-            {/* Floating Badge */}
-            <div className="absolute -bottom-4 -left-4 bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-semibold shadow-lg animate-pulse">
-              Entrega Grátis acima de R$ 50
-            </div>
+            {/* Container Pai (Certifique-se de que o container principal tenha a classe 'relative') */}
+<div className="relative">
+  {/* ... seu código do Grid anterior permanece aqui ... */}
+  
+  {/* Floating Badge Centralizada */}
+  <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-full flex justify-center">
+    <div className="bg-accent text-accent-foreground px-6 py-3 rounded-full text-sm font-semibold shadow-xl animate-pulse whitespace-nowrap">
+      Entrega Grátis acima de R$ 50
+    </div>
+  </div>
+</div>
           </div>
         </div>
       </div>

@@ -13,6 +13,7 @@ interface Product {
   discount: number
   category: string
   bgColor: string
+  image: string // Campo adicionado para a imagem
 }
 
 const products: Product[] = [
@@ -25,6 +26,7 @@ const products: Product[] = [
     discount: 33,
     category: "Suplemento",
     bgColor: "from-emerald-50 to-emerald-100",
+    image: "/picolinato.png", // Ajuste o caminho aqui
   },
   {
     id: "2",
@@ -35,6 +37,7 @@ const products: Product[] = [
     discount: 24,
     category: "Medicamento",
     bgColor: "from-blue-50 to-blue-100",
+    image: "/cimegripe.png", 
   },
   {
     id: "3",
@@ -45,6 +48,7 @@ const products: Product[] = [
     discount: 23,
     category: "Beleza",
     bgColor: "from-pink-50 to-pink-100",
+    image: "/carmed.png",
   },
   {
     id: "4",
@@ -55,6 +59,7 @@ const products: Product[] = [
     discount: 31,
     category: "Suplemento",
     bgColor: "from-amber-50 to-amber-100",
+    image: "/omega 3.png",
   },
   {
     id: "5",
@@ -65,6 +70,7 @@ const products: Product[] = [
     discount: 30,
     category: "Vitamina",
     bgColor: "from-yellow-50 to-yellow-100",
+    image: "/vitamina d3.png",
   },
   {
     id: "6",
@@ -75,6 +81,7 @@ const products: Product[] = [
     discount: 22,
     category: "Cuidados",
     bgColor: "from-orange-50 to-orange-100",
+    image: "/protetor solar.png",
   },
 ]
 
@@ -93,11 +100,15 @@ function ProductCard({ product }: { product: Product }) {
           -{product.discount}%
         </Badge>
 
-        {/* Product Image Placeholder */}
-        <div className="w-24 h-28 bg-white/50 rounded-xl shadow-inner flex items-center justify-center">
-          <div className="w-16 h-20 bg-gradient-to-b from-gray-200 to-gray-300 rounded-lg" />
+        {/* Imagem do Produto Dinâmica */}
+        <div className="relative w-24 h-28 flex items-center justify-center">
+          <img 
+            src={product.image} 
+            alt={product.name} 
+            className="object-contain w-full h-full"
+          />
         </div>
-      </div>
+      </div> 
 
       {/* Content */}
       <div className="p-4">
@@ -143,10 +154,7 @@ export function ProductsSection() {
             <Badge variant="outline" className="mb-4 border-accent text-accent font-semibold">
               Ofertas Especiais
             </Badge>
-            <h2 
-              className="text-3xl md:text-4xl font-bold text-foreground"
-              style={{ fontFamily: 'var(--font-heading)' }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: 'var(--font-heading)' }}>
               Produtos em Destaque
             </h2>
             <p className="text-muted-foreground mt-2">
