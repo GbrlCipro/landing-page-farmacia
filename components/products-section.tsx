@@ -93,15 +93,15 @@ function ProductCard({ product }: { product: Product }) {
   return (
     <div className="group bg-card rounded-2xl border border-border hover:border-primary/30 overflow-hidden hover:shadow-xl transition-all duration-300">
       {/* Image Area */}
-      <div className={`relative aspect-square bg-gradient-to-br ${product.bgColor} p-6 flex items-center justify-center`}>
+      <div className={`relative aspect-square bg-white p-6 flex items-center justify-center`}>
         {/* Discount Badge */}
-        <Badge className="absolute top-3 left-3 bg-accent text-accent-foreground font-bold shadow-md">
+        <Badge className="absolute top-3 left-3 bg-accent text-accent-foreground font-bold shadow-md z-10">
           <Tag className="h-3 w-3 mr-1" />
           -{product.discount}%
         </Badge>
 
         {/* Imagem do Produto Dinâmica */}
-        <div className="relative w-24 h-28 flex items-center justify-center">
+        <div className="relative w-full h-full flex items-center justify-center">
           <img 
             src={product.image} 
             alt={product.name} 

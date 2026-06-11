@@ -83,60 +83,68 @@ export function HeroSection() {
           {/* Right - Product Grid */}
           <div className="relative">
             <div className="grid grid-cols-2 gap-4">
-              {/* Product Cards Preview */}
               <div className="space-y-4">
+                
                 <div className="bg-card rounded-2xl p-4 shadow-lg border border-border hover:shadow-xl transition-shadow">
-                  <div className="aspect-square bg-gradient-to-br from-green-50 to-green-100 rounded-xl mb-3 flex items-center justify-center">
-                    <img src="/vitamina.png" alt="TESTE"/>
-                    <div className="w-16 h-20 bg-primary/20 rounded-lg" />
+                  <div className="aspect-square bg-gradient-to-br from-green-50 to-green-100 rounded-xl mb-3 flex items-center justify-center overflow-hidden">
+                    <img 
+                      src="/vitamina.png"
+                      alt="Vitamina D3"
+                      className="w-full h-full object-cover" />
                   </div>
                   <p className="text-xs text-muted-foreground">Suplemento</p>
                   <p className="font-semibold text-sm truncate">Vitamina D3</p>
                   <p className="text-primary font-bold">R$ 29,90</p>
                 </div>
+
                 <div className="bg-card rounded-2xl p-4 shadow-lg border border-border hover:shadow-xl transition-shadow">
                   <div className="aspect-square bg-gradient-to-br from-red-50 to-red-100 rounded-xl mb-3 flex items-center justify-center">
-                    <img src="/vitamina.png" alt="TESTE"/>
-                    <div className="w-14 h-14 bg-accent/20 rounded-full" />
+                    <img 
+                      src="/protetor_solar.png"
+                      alt="Protetor Solar"
+                      className="w-full h-full object-cover" />
                   </div>
                   <p className="text-xs text-muted-foreground">Cuidados</p>
                   <p className="font-semibold text-sm truncate">Protetor Solar</p>
                   <p className="text-primary font-bold">R$ 49,90</p>
                 </div>
               </div>
+
               <div className="space-y-4 pt-8">
+
                 <div className="bg-card rounded-2xl p-4 shadow-lg border border-border hover:shadow-xl transition-shadow">
                   <div className="aspect-square bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl mb-3 flex items-center justify-center">
-                    <img src="/vitamina.png" alt="TESTE"/>
-                    <div className="w-12 h-16 bg-blue-200/50 rounded-lg" />
+                    <img
+                      src="/dipirona.png"
+                      alt="Dipirona"
+                      className="w-full h-full object-cover" />
                   </div>
                   <p className="text-xs text-muted-foreground">Medicamento</p>
                   <p className="font-semibold text-sm truncate">Dipirona</p>
                   <p className="text-primary font-bold">R$ 12,90</p>
                 </div>
+
                 <div className="bg-card rounded-2xl p-4 shadow-lg border border-border hover:shadow-xl transition-shadow">
                   <div className="aspect-square bg-gradient-to-br from-pink-50 to-pink-100 rounded-xl mb-3 flex items-center justify-center">
-                    <img src="/vitamina.png" alt="TESTE"/>
-                    <div className="w-10 h-14 bg-pink-200/50 rounded-lg" />
+                    <img
+                      src="/hidratante.png"
+                      alt="Hidratante"
+                      className="w-full h-full object-cover" />
                   </div>
                   <p className="text-xs text-muted-foreground">Beleza</p>
                   <p className="font-semibold text-sm truncate">Hidratante</p>
                   <p className="text-primary font-bold">R$ 34,90</p>
                 </div>
+
               </div>
             </div>
 
-            {/* Container Pai (Certifique-se de que o container principal tenha a classe 'relative') */}
-<div className="relative">
-  {/* ... seu código do Grid anterior permanece aqui ... */}
-  
-  {/* Floating Badge Centralizada */}
-  <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-full flex justify-center">
-    <div className="bg-accent text-accent-foreground px-6 py-3 rounded-full text-sm font-semibold shadow-xl animate-pulse whitespace-nowrap">
-      Entrega Grátis acima de R$ 50
-    </div>
-  </div>
-</div>
+            {/* Floating Badge Centralizada */}
+            <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-full flex justify-center">
+              <div className="bg-accent text-accent-foreground px-6 py-3 rounded-full text-sm font-semibold shadow-xl animate-pulse whitespace-nowrap">
+                Entrega Grátis acima de R$ 50
+              </div>
+            </div>
           </div>
         </div>
       </div>
