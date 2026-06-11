@@ -67,7 +67,6 @@ export function HeroSection() {
               </a>
             </div>
 
-            {/* Trust Features */}
             <div className="flex flex-wrap gap-6 mt-4 pt-6 border-t border-border">
               {features.map((feature) => (
                 <div key={feature.label} className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -80,68 +79,50 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right - Product Grid */}
-          <div className="relative">
-            <div className="grid grid-cols-2 gap-4">
+          {/* Right - Product Grid Responsivo */}
+          <div className="flex flex-col gap-6 w-full max-w-lg mx-auto lg:mx-0">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 w-full">
               <div className="space-y-4">
-                
-                <div className="bg-card rounded-2xl p-4 shadow-lg border border-border hover:shadow-xl transition-shadow">
-                  <div className="aspect-square bg-gradient-to-br from-green-50 to-green-100 rounded-xl mb-3 flex items-center justify-center overflow-hidden">
-                    <img 
-                      src="/vitamina.png"
-                      alt="Vitamina D3"
-                      className="w-full h-full object-cover" />
+                <div className="bg-card rounded-2xl p-4 shadow-lg border border-border">
+                  <div className="aspect-square bg-green-50 rounded-xl mb-3 flex items-center justify-center overflow-hidden">
+                    <img src="/vitamina.png" alt="Vitamina D3" className="w-full h-full object-cover" />
                   </div>
                   <p className="text-xs text-muted-foreground">Suplemento</p>
                   <p className="font-semibold text-sm truncate">Vitamina D3</p>
                   <p className="text-primary font-bold">R$ 29,90</p>
                 </div>
-
-                <div className="bg-card rounded-2xl p-4 shadow-lg border border-border hover:shadow-xl transition-shadow">
-                  <div className="aspect-square bg-gradient-to-br from-red-50 to-red-100 rounded-xl mb-3 flex items-center justify-center">
-                    <img 
-                      src="/protetor_solar.png"
-                      alt="Protetor Solar"
-                      className="w-full h-full object-cover" />
+                <div className="bg-card rounded-2xl p-4 shadow-lg border border-border">
+                  <div className="aspect-square bg-red-50 rounded-xl mb-3 flex items-center justify-center overflow-hidden">
+                    <img src="/protetor_solar.png" alt="Protetor Solar" className="w-full h-full object-cover" />
                   </div>
                   <p className="text-xs text-muted-foreground">Cuidados</p>
                   <p className="font-semibold text-sm truncate">Protetor Solar</p>
                   <p className="text-primary font-bold">R$ 49,90</p>
                 </div>
               </div>
-
               <div className="space-y-4 pt-8">
-
-                <div className="bg-card rounded-2xl p-4 shadow-lg border border-border hover:shadow-xl transition-shadow">
-                  <div className="aspect-square bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl mb-3 flex items-center justify-center">
-                    <img
-                      src="/dipirona.png"
-                      alt="Dipirona"
-                      className="w-full h-full object-cover" />
+                <div className="bg-card rounded-2xl p-4 shadow-lg border border-border">
+                  <div className="aspect-square bg-blue-50 rounded-xl mb-3 flex items-center justify-center overflow-hidden">
+                    <img src="/dipirona.png" alt="Dipirona" className="w-full h-full object-cover" />
                   </div>
                   <p className="text-xs text-muted-foreground">Medicamento</p>
                   <p className="font-semibold text-sm truncate">Dipirona</p>
                   <p className="text-primary font-bold">R$ 12,90</p>
                 </div>
-
-                <div className="bg-card rounded-2xl p-4 shadow-lg border border-border hover:shadow-xl transition-shadow">
-                  <div className="aspect-square bg-gradient-to-br from-pink-50 to-pink-100 rounded-xl mb-3 flex items-center justify-center">
-                    <img
-                      src="/hidratante.png"
-                      alt="Hidratante"
-                      className="w-full h-full object-cover" />
+                <div className="bg-card rounded-2xl p-4 shadow-lg border border-border">
+                  <div className="aspect-square bg-pink-50 rounded-xl mb-3 flex items-center justify-center overflow-hidden">
+                    <img src="/hidratante.png" alt="Hidratante" className="w-full h-full object-cover" />
                   </div>
                   <p className="text-xs text-muted-foreground">Beleza</p>
                   <p className="font-semibold text-sm truncate">Hidratante</p>
                   <p className="text-primary font-bold">R$ 34,90</p>
                 </div>
-
               </div>
             </div>
 
-            {/* Floating Badge Centralizada */}
-            <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-full flex justify-center">
-              <div className="bg-accent text-accent-foreground px-6 py-3 rounded-full text-sm font-semibold shadow-xl animate-pulse whitespace-nowrap">
+            {/* Badge Centralizada - Fluxo Normal */}
+            <div className="flex justify-center w-full mt-6">
+              <div className="bg-accent text-accent-foreground px-8 py-4 rounded-full text-lg font-bold shadow-xl animate-pulse whitespace-nowrap max-w-[90%] text-center">
                 Entrega Grátis acima de R$ 50
               </div>
             </div>
