@@ -8,15 +8,17 @@ import Link from "next/link"
 
 function Logo() {
   return (
-    <Link href="/" className="flex items-center gap-2 group">
-      <div className="relative w-10 h-10 flex items-center justify-center">
-        <div className="absolute inset-0 bg-primary rounded-xl rotate-3 group-hover:rotate-6 transition-transform" />
-        <div className="relative flex items-center justify-center">
-          <svg viewBox="0 0 24 24" className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <path d="M12 4v16M4 12h16" strokeLinecap="round" />
-          </svg>
-        </div>
+    <Link href="/" className="flex items-center gap-3 group">
+      {/* Container da imagem */}
+      <div className="relative w-10 h-10 flex items-center justify-center overflow-hidden rounded-xl group-hover:rotate-10 border border-gray-200">
+        <img
+          src="/logo.png"
+          alt="Tião Farma Logo"
+          className="w-full h-full object-contain"
+        />
       </div>
+
+      {/* Textos */}
       <div className="flex flex-col leading-none">
         <span className="font-bold text-xl tracking-tight text-foreground" style={{ fontFamily: 'var(--font-heading)' }}>
           Tião Farma
